@@ -1,0 +1,112 @@
+
+
+<div class="container">
+
+
+      <div class="wrapper fadeInDown">
+          <div id="formContent">
+            <!-- Tabs Titles -->
+        
+            <!-- Icon -->
+            <div class="fadeIn first">
+              <!-- <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" /> -->
+               <div class="alert alert-primary" style="font-size: 18px">Register</div>
+            </div>
+        
+            <!-- Registeration Form -->
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+              <div class="row">
+                <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('firstName').errors  && (registerForm.get('firstName').touched || registerForm.get('firstName').dirty )}">
+                    <input type="text" pattern="[a-zA-Z ]*"  class="fadeIn second err "  formControlName="firstName"  placeholder="First Name">
+                    <div *ngIf="registerForm.get('firstName').errors?.required && (registerForm.get('firstName').touched || registerForm.get('firstName').dirty )">
+                          Only Alphabets
+                    </div>
+                </div>
+                <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('lastName').errors  && (registerForm.get('lastName').touched || registerForm.get('lastName').dirty )}">
+                    <input type="text" pattern="[a-zA-Z ]*"  class="fadeIn third err" formControlName="lastName" placeholder="Last Name">
+                    <div *ngIf="registerForm.get('lastName').errors?.required && (registerForm.get('lastName').touched || registerForm.get('lastName').dirty )">
+                        Only Alphabets
+                  </div>
+                  </div>
+              </div>
+
+
+              <div class="row">
+                  <div class="col-md-6"  [ngClass]="{'has-error':registerForm.get('email').errors  && (registerForm.get('email').touched || registerForm.get('email').dirty )}">
+                      <input type="text" class="fadeIn second err" formControlName="email"  placeholder="Email Id">
+                      <div *ngIf="registerForm.get('email').errors?.required && (registerForm.get('email').touched || registerForm.get('email').dirty )">
+                          Enter valid email id
+                    </div>
+                  </div>
+                  <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('aadhar').errors  && (registerForm.get('aadhar').touched || registerForm.get('aadhar').dirty )}">
+                      <input type="text" pattern="[0-9]*"  class="fadeIn third err" formControlName="aadhar"  placeholder="AadharCard No">
+                      <div *ngIf="registerForm.get('aadhar').errors?.required && (registerForm.get('aadhar').touched || registerForm.get('aadhar').dirty )">
+                          Enter valid AadharCard Id
+                    </div>
+  
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('phone').errors  && (registerForm.get('phone').touched || registerForm.get('phone').dirty )}">
+                        <input type="text" pattern="[0-9]*"  class="fadeIn second err" formControlName="phone"  placeholder="Mobile No.">
+                        <div *ngIf="registerForm.get('phone').errors?.required && (registerForm.get('phone').touched || registerForm.get('phone').dirty )">
+                            Enter valid Mobile Number
+                      </div>
+                    </div>
+                    <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('date_of_birth').errors  && (registerForm.get('date_of_birth').touched || registerForm.get('date_of_birth').dirty )}">
+                      <input type="date"  class="fadeIn second err" formControlName="date_of_birth"  placeholder="Date Of Birth">
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('password').errors  && (registerForm.get('password').touched || registerForm.get('password').dirty )}">
+                      <input type="password"  class="fadeIn second err" formControlName="password"  placeholder="Password">
+                  </div>
+                  <div class="col-md-6" [ngClass]="{'has-error':registerForm.get('c_password').errors  && (registerForm.get('c_password').touched || registerForm.get('c_password').dirty )}">
+                    <input type="password"  class="fadeIn second err" formControlName="c_password"  placeholder="Confirm Passowrd">
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                        
+                  <div class="row" style="margin-top:20px">
+                    <div class="col-md-4" >
+                        <label for="gender">Gender :</label>
+                    </div>
+                    <div class="col-md-6" style="text-align: left">
+                        <input type="radio" value="male" formControlName="gender"  >Male<br>
+                        <input type="radio" value="female" formControlName="gender" >Female
+                    </div>                               
+                  </div>  
+
+                </div>
+                <div class="col-md-6">
+                  <div>
+                      <a class="underlineHover" style="padding: 20px">Already Resistered ? </a><a routerLink="login" class="underlineHover">Login Here</a>
+                  </div>
+                </div>
+              </div>
+
+
+              <input type="submit" class="fadeIn fourth" [disabled]="loading" value="Register">
+            </form>
+       
+            <!-- Remind Passowrd -->
+                    
+
+                   
+                 
+                 
+             
+            
+           
+        
+          </div>
+        </div>
+</div>
