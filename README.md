@@ -1,17 +1,4 @@
-# Capstone-Project
-Banking Application
-
-1. Avinash Thakur (d16696)
-Back-end -> Worked on Angular
-2. Deepika Kini (d16714) 
-Back-end -> Worked on Spring. 
-3. Jas Haria (d16688)
-Back-end -> Spring
-Front-end -> Worked on Angular
-4. Megha Shinde (d17487)
-Front-end -> Worked on Angular
-5. Paviksha Poojary (d16705)
-Back-end -> Worked on Spring
+# Banking WebApp
 
 Technologies used:
 -Angular 7
